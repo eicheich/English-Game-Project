@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Team Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe Team Game</h1>
+    <div id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    
+    <div id="message"></div>
+    
+    <div id="question-container">
+        <p id="question">Question: What is 2 + 2?</p>
+        <p id="clue">Clue: It's the result of adding two equal numbers.</p> <!-- Add the clue here -->
+        <div>
+            <input type="radio" id="option1" name="answer" value="3">
+            <label for="option1">3</label><br>
+            <input type="radio" id="option2" name="answer" value="4">
+            <label for="option2">4</label><br>
+            <input type="radio" id="option3" name="answer" value="5">
+            <label for="option3">5</label><br>
+        </div>
+        <button id="submit-answer">Submit</button>
+        <p id="timer">Time left: <span id="time-left">10</span>s</p>
+    </div>
+    
+
+    <button id="reset">Reset Game</button>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
