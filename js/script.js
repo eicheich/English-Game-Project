@@ -44,8 +44,11 @@ submitAnswerButton.addEventListener('click', submitAnswer);
 function handleClick(e) {
     selectedCellIndex = e.target.getAttribute('data-index');
 
-    // If the cell is already taken, return
-    if (board[selectedCellIndex] !== '') return;
+    // If the cell is already taken by the same team, return
+    if (board[selectedCellIndex] === currentPlayer) {
+        messageDiv.textContent = 'You cannot replace your own team\'s move!';
+        return;
+    }
 
     questionContainer.style.display = 'block';
 
@@ -54,6 +57,7 @@ function handleClick(e) {
 
     startTimer();
 }
+
 
 function loadQuestion() {
     // Get the current question and clue
@@ -102,8 +106,6 @@ function submitAnswer() {
             if (checkWin()) {
                 messageDiv.textContent = `${getCurrentPlayer()} from Team ${teamTurn} wins!`;
                 endGame();
-            } else if (board.every(cell => cell !== '')) {
-                messageDiv.textContent = 'It\'s a draw!';
             } else {
                 messageDiv.textContent = `${getCurrentPlayer()} answered correctly!`;
                 switchPlayer();
@@ -120,6 +122,7 @@ function submitAnswer() {
         messageDiv.textContent = 'Please select an answer!';
     }
 }
+
 
 function switchPlayer() {
     teamTurn = teamTurn === 'A' ? 'B' : 'A';
@@ -148,6 +151,7 @@ function checkWin() {
         });
     });
 }
+
 
 function resetGame() {
     board.fill('');
