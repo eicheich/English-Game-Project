@@ -178,6 +178,9 @@
             cursor: pointer;
             text-transform: uppercase;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
 
         .return-btn:hover {
@@ -257,7 +260,6 @@
         <div>
             <button id="option1" class="answer-btn" value="3" onclick="checkAnswer(this)">3</button>
             <button id="option2" class="answer-btn" value="4" onclick="checkAnswer(this)">4</button>
-            <button id="option3" class="answer-btn" value="5" onclick="checkAnswer(this)">5</button>
         </div>
         <p id="timer">Time left: <span id="time-left">10</span>s</p>
     </div>
