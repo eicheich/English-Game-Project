@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #00c6ff, #fff);
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.blaze {
+    background-image: url("https: //imgur.com/AU4CbI3");
+}
+.wave {
+    color: #0077ff;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000;
+    background-image: url('wave.png');
+    /* You can replace this with actual wave effects */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.start-btn {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.start-btn:hover {
+    background-color: #f0f0f0;
+}
